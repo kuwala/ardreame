@@ -1,0 +1,162 @@
+#ifndef DISPLAYVARS_H
+#define DISPLAYVARS_H
+
+#include "Displayer.h"
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(8, 7, 5, 4, 3, 2);
+
+//Used from inside botBoy
+Displayer dispTopRight(&lcd,8,0,8);
+
+Displayer dispTopLeft(&lcd,0,0,8);
+
+
+// *** Common Strings ***
+String clear16 = "                "; // used to clear a row
+String clear8 = "        ";
+
+byte arduinoCen[8] = {
+B00010001,
+B00001010,
+B00001000,
+B00000100,
+B00000010,
+B00001010,
+B00010001,
+B00000000
+};
+
+byte arduinoMin[8] = {
+B00001111,
+B00010000,
+B00010000,
+B00010111,
+B00010000,
+B00010000,
+B00001111,
+B00000000
+};
+
+byte arduinoPls[8] = {
+B00011110,
+B00000001,
+B00001001,
+B00011101,
+B00001001,
+B00000001,
+B00011110,
+B00000000
+};
+
+byte arduinoLeftEnd[8] = {
+B00000000,
+B00000000,
+B00000000,
+B00000001,
+B00000001,
+B00000000,
+B00000000,
+B00000000,
+};
+
+byte arduinoRightEnd[8] = {
+B00000000,
+B00000000,
+B00000000,
+B00010000,
+B00010000,
+B00000000,
+B00000000,
+B00000000,
+};
+
+byte heartSym[8] = {
+B00000000,
+B00000000,
+B00001010,
+B00010101,
+B00010001,
+B00001010,
+B00000100,
+B00000000
+};
+
+byte eyeGlassesSym[8] = {
+B00000000,
+B00001110,
+B00010001,
+B00010101,
+B00010101,
+B00010001,
+B00001110,
+B00000000
+};
+
+byte eyeDotsSym[8] = {
+B00000,
+B00000,
+B00100,
+B00100,
+B00000,
+B00000,
+B00000,
+B00000
+};
+
+byte eyeClosedSym[8] = {
+B00000,
+B00000,
+B01110,
+B00000,
+B00000,
+B00000,
+B00000,
+B00000
+};
+
+byte mouthClosedSym[8] = { 
+B00000000,
+B00000000,
+B00000000,
+B00000000,
+B00000000,
+B00001110,
+B00000000,
+B00000000,
+};
+
+byte mouthOpenSym[8] = { 
+B00000000,
+B00000000,
+B00000000,
+B00000000,
+B00001110,
+B00000100,
+B00000000,
+B00000000,
+};
+
+byte mouthClosedLowSym[8] = { 
+B00000000,
+B00000000,
+B00000000,
+B00000000,
+B00000000,
+B00000000,
+B00001110,
+B00000000,
+};
+
+byte eyeGlassesLeftSym[8] = {
+B00000000,
+B00001110,
+B00010001,
+B00011001,
+B00011001,
+B00010001,
+B00001110,
+B00000000
+};
+
+#endif
